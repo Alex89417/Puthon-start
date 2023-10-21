@@ -115,7 +115,6 @@ while flag:
         print(n)
     i += 1 """
 
- #                     39:00
 
 
 
@@ -124,16 +123,3 @@ while flag:
     for i in range(0, 6):
         line += "*"
     print(line) """
-
-
-
-
-
-
-
-
-
-
-
-
-
