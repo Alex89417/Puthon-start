@@ -79,19 +79,13 @@ print(*list_1)
 
 #                                                                 вариант 1
 
-# import random
-# a = int(input("Ddtlbnt количество кустов: "))
-# arr = [random.randint(1, 20) for _ in range(a)]
-
-arr = [5, 8, 6, 4, 9, 2, 7, 3]
-
-i = 1
-sum = (arr[0] + arr[1] + arr[2])
-while i < len(arr) - 2:
-   if arr[i] + arr[i+1] + arr[i+2] > sum:
-      sum = arr[i] + arr[i+1] + arr[i+2]
-      i+=1
-   else: i+=1
+import random
+a = int(input("Введите количество кустов: "))
+arr = [random.randint(1, 20) for _ in range(a)]
+sum = 0
+for i in range(a):
+   if (arr[i] + arr[i-1] + arr[i-2]) > sum:
+      sum = (arr[i] + arr[i-1] + arr[i-2])  
 print(arr)
 print(sum)
 
