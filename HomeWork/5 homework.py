@@ -1,4 +1,4 @@
-print("hello")
+
 """ # Напишите функцию f, которая на вход принимает два числа a и b, и возводит число a в целую степень b с помощью рекурсии.
 # Функция не должна ничего выводить, только возвращать значение.
 # Пример: a = 3; b = 5 -> 243 (3⁵)
@@ -9,7 +9,7 @@ a = int(a)
 b = int(b)
 
 def f(a, b):
-    if b == 0:
+    if b < 1:
         return 1
     return a * f(a, b - 1)
 print(f(a , b)) """
@@ -22,19 +22,40 @@ print(f(a , b)) """
 
 
 
+# def sum_all(a, b):
+#     if a == 0:
+#         return b
+#     return sum_all(a - 1, b + 1)
+
+# num1, num2 = input("Введите два числа через пробел: ").split()
+# if num2 > num1:
+#     b = int(num2)
+#     a = int(num1)
+# else:
+#     b = int(num1)
+#     a = int(num2)
+# print(sum_all(a, b))
+
+# ---------------,   оптимизировано -------------------------
 def sum_all(a, b):
-    if a == 0:
-        return b
+    if a == 1:
+        return b + 1
+    if a > b:
+        a, b = b,a
     return sum_all(a - 1, b + 1)
 
-num1, num2 = input("Введите два числа через пробел: ").split()
-if num2 > num1:
-    b = int(num2)
-    a = int(num1)
-else:
-    b = int(num1)
-    a = int(num2)
-print(sum_all(a, b)) """
+a, b = input("Введите два числа через пробел: ").split()
+a = int(a)
+b = int(b)
+print(sum_all(a, b))
 
+# --------------------   просто доп решение    --------------------------
+# def sum(a, b):
+#     if b > 0:
+#         return sum(a + 1, b - 1)
+#     return a
 
-
+# a, b = input("Введите два числа через пробел: ").split()
+# a = int(a)
+# b = int(b)
+# print(sum(a, b)) """
