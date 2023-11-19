@@ -66,6 +66,14 @@ for i in l:
 # ----------------------------------   1   вариант    -------------------------------------
 
 
+# a1, d, n = 2, 3, 4
+# count = a1
+# for i in range(n):
+#   print(count, end=" ")
+#   count += d
+
+# ------------------------------
+
 # i = a
 # while len(list1) < n:
 #     list1.append(i)
@@ -73,9 +81,10 @@ for i in l:
 #     i += d
 
 # ----------------------------------   2   вариант    -------------------------------------
-
-# name = [i for i in range(a1,100, d)]
-# print(*name[:n])
+# a1, d, n = 2, 3, 4
+# an = a1 + (n-1) * d
+# name = [i for i in range(a1,an + 1, d)]
+# print(*name)
 
 # ----------------------------------   GB   вариант    -------------------------------------
 
@@ -91,17 +100,20 @@ min_number = 0
 max_number = 10
 
 # ----------------------------------   1   вариант    -------------------------------------
-# for i in range(len(list_1)):
-#     if list_1[i] >= min_number and list_1[i] <= max_number:
-#         print(i)
+list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+min_number = 0
+max_number = 10
+name = [i for i in range(len(list_1)) if min_number <= list_1[i] <= max_number]
+print(name)
+
+# -----------------------------------
+
+for i in range(len(list_1)):
+  if min_number <= list_1[i] <= max_number:
+    print(i)
 
 
 # ----------------------------------   GB   вариант    -------------------------------------
 for i in range(len(list_1)):
   if min_number <= list_1[i] <= max_number:
     print(i) """
-
-
-
-
-

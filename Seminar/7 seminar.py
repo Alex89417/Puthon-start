@@ -43,21 +43,25 @@ print(max(orbits, key = lambda x: x[0] * x[1] * (x[0] != x[1]))) """
 # некоторой характеристики, и возвращают True, если это так. Если значение характеристики для разных объектов отличается - то False. Для пустого
 # набора объектов, функция должна возвращать True. Аргумент characteristic - это функция, которая принимает объект и вычисляет его характеристику.
 
-values = [0, 1, 2, 10, 6] 
-def same_by(characteristic, objects):
-# return len(objects) == len(list(filter(characteristic, objects)))
-    return len(list(filter(characteristic, objects))) == 0
-if same_by(lambda x: x % 2, values):
-    print('same')
-else:
-    print('different') """
+# values = [0, 2, 10, 6] 
+# def same_by(characteristic, objects):
+#     return len(list(filter(characteristic, objects))) == 0
+
+# if same_by(lambda x: x % 2, values):
+#     print('same')
+# else:
+#     print('different')
+
+# ----------------------
+
+# values = [0, 2, 10, 1, 6] 
+# if len(list(filter(lambda x: x % 2, values))) == 0:
+#     print("same")
+# else: print("different") """
 
 
 """ numbers ='2 12 -4 77 -38 8'
 # вывод: 12 77 -38
-numbers = numbers.split()
-numbers = list(map(int, numbers))
-new_num = list(filter(lambda x: abs(x) in range(10, 100), numbers))
-
-print(*new_num) """
+numbers = list(map(int, numbers.split()))
+print(*list(filter(lambda x: abs(x) in range(10, 100), numbers))) """
 
